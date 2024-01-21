@@ -2,11 +2,11 @@
 const textInput = document.getElementById('text-input');
 const checkButton = document.getElementById('check-btn');
 const result = document.getElementById('result');
-const RegExp = /[^a-zA-Z0-9]/gi;
+const regExp = new RegExp(/[^a-zA-Z0-9]/gi);
 
 //Arrow => Functions
 const textInputCleanFunction = (input) => {
-  const inputClean = input.toLowerCase().replace(RegExp, "");
+  const inputClean = input.toLowerCase().replace(regExp, "");
   isPalindrome(inputClean);
 };
 const isPalindrome = (input) => {
